@@ -5,28 +5,8 @@ export const store = reactive({
     APIseries: "https://api.themoviedb.org/3/search/tv?api_key=25f66a099931799507fbdf6c367ad650&language=it-IT&query=",
     movies: [],
     series: [],
-    flags: [
-        {
-            "language": "it",
-            "imgFlag": "🇮🇹",
-        },
-
-        {
-            "language": "en",
-            "imgFlag": "🇬🇧"
-        },
-        {
-            "language": "de",
-            "imgFlag": "🇩🇪"
-        },
-        {
-            "language": "es",
-            "imgFlag": "🇪🇸"
-        },
-        {
-            "language": "fr",
-            "imgFlag": "🇫🇷"
-        }
+    lang: [
+        "it", "en", "de", "fr", "ja"
     ],
     searchString: "",
     imgBase: "https://image.tmdb.org/t/p/w342"

@@ -22,7 +22,7 @@ export default {
 <template>
     <nav class="navbar bg-black">
         <div class="container-fluid">
-            <a class="navbar-brand text-danger fs-3">Boolflix</a>
+            <a class="navbar-brand text-danger fs-2">Boolflix</a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                     v-model="store.searchString">

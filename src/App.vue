@@ -61,13 +61,13 @@ export default {
 <template>
   <AppHeader @search="searchMovies(); searchSeries()" />
   <div class="container d-flex flex-wrap m-auto mt-2" v-if="store.movies.length > 0">
-    <h1>Movies</h1>
+    <h1 class="text-white">Movies</h1>
     <div class="row">
       <AppCards />
     </div>
   </div>
   <div class="container d-flex flex-wrap m-auto mt-2" v-if="store.series.length > 0">
-    <h1>Shows </h1>
+    <h1 class="text-white">Shows </h1>
     <div class=" row">
       <AppCardsSeries />
     </div>
