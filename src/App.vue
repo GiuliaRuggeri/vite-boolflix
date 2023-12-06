@@ -53,7 +53,23 @@ export default {
       });
     },
 
+    getMovieGen() {
+      axios.get(store.APIMovieGen).then(resp => {
+        this.store.movieGen = resp.data.genres;
+      })
+    },
 
+    getShowGen() {
+      axios.get(store.APIShowGen).then(resp => {
+        this.store.showGen = resp.data.genres;
+      })
+    }
+
+
+  },
+  mounted() {
+    this.getMovieGen(),
+      this.getShowGen()
   }
 }
 </script>
@@ -62,13 +78,13 @@ export default {
   <AppHeader @search="searchMovies(); searchSeries()" />
   <div class="container d-flex flex-wrap m-auto mt-2" v-if="store.movies.length > 0">
     <h1 class="text-white">Movies</h1>
-    <div class="row">
+    <div class="row flex-nowrap w-100 overflow-auto">
       <AppCards />
     </div>
   </div>
   <div class="container d-flex flex-wrap m-auto mt-2" v-if="store.series.length > 0">
     <h1 class="text-white">Shows </h1>
-    <div class=" row">
+    <div class="row flex-nowrap w-100 overflow-auto">
       <AppCardsSeries />
     </div>
   </div>

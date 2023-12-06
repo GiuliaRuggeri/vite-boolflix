@@ -39,7 +39,8 @@ export default {
 }
 </script>
 <template>
-    <div class="col-3 text-center text-white" v-for="movie in store.movies">
+    <div class="col-3 text-center text-white" v-for="movie in store.movies"
+        v-show="movie.genre_ids.includes(store.selectMovieGen)">
         <div class="position-relative cover m-2">
             <img :src="`${store.imgBase}${movie.poster_path}`" alt="" class="w-100 h-100">
             <div class=" info p-4">

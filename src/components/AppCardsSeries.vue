@@ -40,7 +40,8 @@ export default {
 }
 </script>
 <template>
-    <div class="col-3 text-center text-white" v-for="show in store.series">
+    <div class="col-3 text-center text-white" v-for="show in store.series"
+        v-show="show.genre_ids.includes(store.selectShowGen)">
         <div class="position-relative cover m-2">
             <img :src="`${store.imgBase}${show.poster_path}`" alt="" class="img-fluid">
             <div class="info p-4">
