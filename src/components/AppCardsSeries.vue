@@ -53,6 +53,8 @@ export default {
                 <div>
                     <span v-for="i in getRating(show.vote_average)"><font-awesome-icon :icon="['fas', 'star']"
                             style="color: #ecc918;" /></span>
+                    <span v-for="i in (5 - getRating(show.vote_average))"><font-awesome-icon :icon="['fas', 'star']"
+                            style="color: rgb(189, 189, 189);" /></span>
 
                 </div>
                 <p>{{ show.overview }}</p>

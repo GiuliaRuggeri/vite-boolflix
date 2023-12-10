@@ -54,6 +54,8 @@ export default {
                     <span v-for="i in getRating(movie.vote_average)"><font-awesome-icon :icon="['fas', 'star']"
                             style="color: #ecc918;" />
                     </span>
+                    <span v-for="i in (5 - getRating(movie.vote_average))"><font-awesome-icon :icon="['fas', 'star']"
+                            style="color:rgb(189, 189, 189)" /></span>
 
                 </div>
                 <p>{{ movie.overview }}</p>
